@@ -1,0 +1,205 @@
+import type { BoardState } from './types'
+
+export function createSeed(): BoardState {
+  return {
+    partners: [
+      {
+        id: 'p-maya',
+        name: 'Maya Chen',
+        company: 'Northline',
+        role: 'Platform Eng Manager',
+        linkedinUrl: 'https://www.linkedin.com/in/maya-chen',
+        notes:
+          'Runs incident review for a 12-person platform team. Allergic to tools that create more status fields.',
+        status: 'active',
+        closedReason: null,
+        createdAt: '2026-08-20T14:00:00.000Z',
+        updatedAt: '2026-09-11T18:40:00.000Z',
+      },
+      {
+        id: 'p-arjun',
+        name: 'Arjun Mehta',
+        company: 'Relaykit',
+        role: 'Founder',
+        linkedinUrl: 'https://www.linkedin.com/in/arjun-mehta',
+        notes: 'Solo founder, 8 customer conversations a week, currently in Notion.',
+        status: 'talking',
+        closedReason: null,
+        createdAt: '2026-08-28T10:00:00.000Z',
+        updatedAt: '2026-09-08T16:20:00.000Z',
+      },
+      {
+        id: 'p-priya',
+        name: 'Priya Nair',
+        company: 'Bundlehq',
+        role: 'Head of CS',
+        linkedinUrl: '',
+        notes:
+          'Met at a CS roundtable. Interested, but no working session on the calendar yet.',
+        status: 'prospect',
+        closedReason: null,
+        createdAt: '2026-09-10T09:00:00.000Z',
+        updatedAt: '2026-09-10T09:30:00.000Z',
+      },
+      {
+        id: 'p-sam',
+        name: 'Sam Ortiz',
+        company: 'Independent',
+        role: 'Consultant',
+        linkedinUrl: '',
+        notes: 'Evaluated this as a personal CRM he could resell to clients.',
+        status: 'closed',
+        closedReason: 'lost',
+        createdAt: '2026-08-12T11:00:00.000Z',
+        updatedAt: '2026-08-22T19:10:00.000Z',
+      },
+      {
+        id: 'p-leah',
+        name: 'Leah Kim',
+        company: 'Copperline',
+        role: 'VP Product',
+        linkedinUrl: 'https://www.linkedin.com/in/leah-kim',
+        notes: 'Became a design partner after the first working session.',
+        status: 'closed',
+        closedReason: 'won',
+        createdAt: '2026-08-18T13:00:00.000Z',
+        updatedAt: '2026-09-04T17:00:00.000Z',
+      },
+    ],
+    hypotheses: [
+      {
+        id: 'h-maya-threads',
+        partnerId: 'p-maya',
+        text: 'SREs will share raw Slack incident threads if the output is a structured learning log, not another status field.',
+        status: 'open',
+        createdAt: '2026-08-20T14:10:00.000Z',
+        updatedAt: '2026-09-11T18:40:00.000Z',
+      },
+      {
+        id: 'h-maya-summary',
+        partnerId: 'p-maya',
+        text: 'Auto-writing a full summary after every call will be enough for teams to learn.',
+        status: 'invalidated',
+        createdAt: '2026-08-20T14:12:00.000Z',
+        updatedAt: '2026-09-11T18:40:00.000Z',
+      },
+      {
+        id: 'h-arjun-weekly',
+        partnerId: 'p-arjun',
+        text: 'Founders will update the board weekly without reminders.',
+        status: 'unclear',
+        createdAt: '2026-08-28T10:10:00.000Z',
+        updatedAt: '2026-09-08T16:20:00.000Z',
+      },
+      {
+        id: 'h-priya-intros',
+        partnerId: 'p-priya',
+        text: 'Heads of CS will introduce us to three churn-risk accounts if we show a 15-minute learning board instead of a pitch deck.',
+        status: 'open',
+        createdAt: '2026-09-10T09:20:00.000Z',
+        updatedAt: '2026-09-10T09:20:00.000Z',
+      },
+      {
+        id: 'h-sam-crm',
+        partnerId: 'p-sam',
+        text: 'Consultants will pay for this as a personal CRM.',
+        status: 'invalidated',
+        createdAt: '2026-08-12T11:10:00.000Z',
+        updatedAt: '2026-08-22T19:10:00.000Z',
+      },
+      {
+        id: 'h-leah-first-call',
+        partnerId: 'p-leah',
+        text: 'A VP will become a design partner if the first session produces one concrete product change, not a recap email.',
+        status: 'validated',
+        createdAt: '2026-08-18T13:10:00.000Z',
+        updatedAt: '2026-09-04T17:00:00.000Z',
+      },
+    ],
+    conversations: [
+      {
+        id: 'c-maya-1',
+        partnerId: 'p-maya',
+        date: '2026-09-11',
+        notes:
+          'Walked Maya through a mock of auto-generated incident summaries. She was blunt: her team already ignores Confluence recaps. They will share raw Slack threads only if the output is a learning log they have to judge — not another status field the tool fills in for them.',
+        createdAt: '2026-09-11T18:40:00.000Z',
+      },
+      {
+        id: 'c-arjun-1',
+        partnerId: 'p-arjun',
+        date: '2026-09-08',
+        notes:
+          'Arjun loved the board in the room. Two weeks later it was still on last week’s state. He said he “meant to update it Sunday night” and then didn’t.',
+        createdAt: '2026-09-08T16:20:00.000Z',
+      },
+      {
+        id: 'c-sam-1',
+        partnerId: 'p-sam',
+        date: '2026-08-22',
+        notes:
+          'Sam evaluated this as a personal CRM he could resell to consulting clients. The conversation kept returning to invoices, retainers, and client workspaces.',
+        createdAt: '2026-08-22T19:10:00.000Z',
+      },
+      {
+        id: 'c-leah-1',
+        partnerId: 'p-leah',
+        date: '2026-09-04',
+        notes:
+          'First session we wrote one product change together on the board before hanging up. Leah asked to join the Thursday working session the same afternoon.',
+        createdAt: '2026-09-04T17:00:00.000Z',
+      },
+    ],
+    learnings: [
+      {
+        id: 'l-maya-1',
+        conversationId: 'c-maya-1',
+        hypothesisId: 'h-maya-summary',
+        text: 'Auto-writing a full summary after a call will be ignored. Maya’s team already skips recaps; they need a forced judgment, not generated prose.',
+        outcome: 'invalidated',
+        nextProductChange:
+          'Require a manual outcome tag (validated / invalidated / unclear) before a conversation can be saved. Do not auto-write summaries.',
+        createdAt: '2026-09-11T18:40:00.000Z',
+      },
+      {
+        id: 'l-maya-2',
+        conversationId: 'c-maya-1',
+        hypothesisId: 'h-maya-threads',
+        text: 'Sharing raw Slack incident threads is plausible if the artifact is a structured learning log. She asked to see outcome tags in a prototype before introducing an SRE.',
+        outcome: 'unclear',
+        nextProductChange: '',
+        createdAt: '2026-09-11T18:41:00.000Z',
+      },
+      {
+        id: 'l-arjun-1',
+        conversationId: 'c-arjun-1',
+        hypothesisId: 'h-arjun-weekly',
+        text: 'They liked the concept but forgot to log. Weekly update habit is not self-sustaining — memory is the failure, not comprehension.',
+        outcome: 'unclear',
+        nextProductChange:
+          'Add a weekly nudge email if usage stays thin. Note: future work, not in this build.',
+        createdAt: '2026-09-08T16:20:00.000Z',
+      },
+      {
+        id: 'l-sam-1',
+        conversationId: 'c-sam-1',
+        hypothesisId: 'h-sam-crm',
+        text: 'Consultants will not pay for a learning board. They wanted client billing, retainers, and workspaces — out of scope.',
+        outcome: 'invalidated',
+        nextProductChange:
+          'Do not add billing. Keep the unit of work as a learning loop, not a client account.',
+        createdAt: '2026-08-22T19:10:00.000Z',
+      },
+      {
+        id: 'l-leah-1',
+        conversationId: 'c-leah-1',
+        hypothesisId: 'h-leah-first-call',
+        text: 'Writing one concrete product change live in the first session was the close. A recap email would not have been enough.',
+        outcome: 'validated',
+        nextProductChange:
+          'End every first call by writing the next product change together, live.',
+        createdAt: '2026-09-04T17:00:00.000Z',
+      },
+    ],
+  }
+}
