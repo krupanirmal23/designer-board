@@ -1,5 +1,7 @@
 # Design Partner Board
 
+**Live demo:** https://krupanirmal23.github.io/designer-board/
+
 A tiny CRM for early product work. The unit of work is not a contact stage — it is a loop:
 
 **hypothesis → evidence from a conversation → next product change**
